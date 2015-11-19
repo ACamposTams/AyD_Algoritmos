@@ -174,3 +174,12 @@ std::vector<int> coneWindow::zoomOut(std::vector<int> currentPoints)
 
     return zoomedPoints;
 }
+
+void coneWindow::on_pushButton_6_clicked()
+{
+    figures.push_back(points);
+    QRect rectangle(points[0],points[1],points[2],points[3]);
+    rects.push_back(rectangle);
+    figDegrees.push_back(180);
+    update();
+}
